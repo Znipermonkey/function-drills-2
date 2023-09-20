@@ -79,10 +79,10 @@ Write a function called 'pricesPlusTax' that takes 2 params: an array ('prices' 
 function pricesPlusTax(priceArr, callback){
     
     for(let i = 0; i < priceArr.length; i++){
-        callback.push(priceArr[i] + priceArr[i] * 0.2)
+        totalCost.push(priceArr[i] + priceArr[i] * 0.2)
         
-      }
-    return callback
+    }
+    callback(totalCost);
 }
 
 
@@ -91,8 +91,8 @@ Invoke the 'pricesPlusTax' function, passing in the 'prices' array and a callbac
 */
 
 // CODE HERE
-pricesPlusTax(prices, totalCost)
-console.log(totalCost)
+pricesPlusTax(prices, (totalCost) => console.log(`The new array plus tax = ${totalCost}`))
+
 ////////// PROBLEM 5 //////////
 
 /* 
